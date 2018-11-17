@@ -1,0 +1,134 @@
+.video-story{
+    background-color: #fff; 
+    grid-column: center-start / center-end;
+    grid-row: 5 / 6;
+
+    display: grid;
+
+    grid-template-columns: 37% 13% 50%; 
+    grid-template-rows: 1fr;  
+
+    @media only screen and (max-width: $bp-medium){
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media only screen and (max-width: $bp-small){
+        grid-template-rows: 2fr 2fr 1fr; 
+        grid-template-columns: 1fr;
+    }
+} 
+
+.tile{
+    position: relative; 
+    padding: 4rem 2rem 4rem 6rem;
+   
+
+    &--tube{
+        grid-column: 1 /  2 ;  
+        
+        @media only screen and (max-width: $bp-medium){
+            grid-row: 2 / 3;  
+            grid-column: 1 / 2 ;
+        }
+
+        @media only screen and (max-width: $bp-small){
+            grid-row: 2 / 3;  
+        }
+    }
+
+    &--photo{
+
+    }
+
+    &--wide{
+
+    }
+
+    & span{
+        display: inline-block;
+        color: $color-grey-light; 
+        font-size: 1.2rem;
+        margin-top: .3rem;
+        margin-bottom: 3rem;    
+    }
+
+
+    &__icon{
+        width: 4rem;
+        height: 4rem;;
+        fill: #fff;   
+        padding: .7rem;   
+
+        position: absolute;
+        top: 3.2rem;  
+        left: 0;
+
+        &--red{
+            background-color: $color-google;
+        }
+
+        &--blue{
+            background-color: $color-tweeter;
+        }
+    }
+} 
+
+.reactions{
+    background-color: $color-blue-dark;
+    grid-column: 2 /  3;  
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media only screen and (max-width: $bp-medium){
+        grid-row: 1 / 3;  
+        grid-column: 2 / 3 ; 
+    }
+
+    @media only screen and (max-width: $bp-small){
+        grid-row: 3 / 4;  
+        grid-column: 1 / 2 ; 
+
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__icon{
+        width: 4rem;
+        height: 4rem;;
+        fill: #fff;
+        margin-bottom: .8rem;
+    }
+
+    &__text{
+        color: #fff;  
+        font-size: 1.7rem;
+    }
+}
+
+.video{
+    grid-column: 3 /  4 ;
+    min-height: 30rem; 
+    
+    @media only screen and (max-width: $bp-medium){
+        grid-row: 1 / 2;  
+        grid-column: 1 / 2 ; 
+    }
+
+    @media only screen and (max-width: $bp-small){
+        grid-row: 1 / 2;  
+    }
+
+    & iframe{
+        width: 100%;
+        height: 100%;
+    }
+}
