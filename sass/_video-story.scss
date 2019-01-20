@@ -19,61 +19,6 @@
     }
 } 
 
-.tile{
-    position: relative; 
-    padding: 4rem 2rem 4rem 6rem;
-   
-
-    &--tube{
-        grid-column: 1 /  2 ;  
-        
-        @media only screen and (max-width: $bp-medium){
-            grid-row: 2 / 3;  
-            grid-column: 1 / 2 ;
-        }
-
-        @media only screen and (max-width: $bp-small){
-            grid-row: 2 / 3;  
-        }
-    }
-
-    &--photo{
-
-    }
-
-    &--wide{
-
-    }
-
-    & span{
-        display: inline-block;
-        color: $color-grey-light; 
-        font-size: 1.2rem;
-        margin-top: .3rem;
-        margin-bottom: 3rem;    
-    }
-
-
-    &__icon{
-        width: 4rem;
-        height: 4rem;;
-        fill: #fff;   
-        padding: .7rem;   
-
-        position: absolute;
-        top: 3.2rem;  
-        left: 0;
-
-        &--red{
-            background-color: $color-google;
-        }
-
-        &--blue{
-            background-color: $color-tweeter;
-        }
-    }
-} 
-
 .reactions{
     background-color: $color-blue-dark;
     grid-column: 2 /  3;  

@@ -1,14 +1,10 @@
 .home{
-  //  background-color: orange;
-
     grid-column: center-start / center-end;
     grid-row: 3 / 4;
 
     display: grid;
-
     grid-template-columns: repeat(4, 1fr) ;
     grid-template-rows: repeat(4, min-content) ; 
-
     grid-gap: 1.5rem;
 
     @media only screen and (max-width: $bp-medium){
@@ -23,6 +19,7 @@
 
     display: flex;
     flex-direction: column;
+
     
     @media only screen and (max-width: $bp-medium){
         grid-row: 1 / 2;
@@ -59,6 +56,7 @@
 .contact{
     background-color: $color-grey-light-2;  
     padding: 1.8rem;
+    height: 100%;
 
     &__list{
         @media only screen and (max-width: $bp-large){
@@ -186,11 +184,9 @@
 
         & span{
             font-size: 1.6rem;
-
         }
 
         &__icon-box{
-            //width: 50%;
             margin-top: 2.4rem; 
 
             display: flex;
@@ -245,7 +241,6 @@
             grid-row: 4 / 5;
             grid-column: 1 / 3;
         }
-
     }
 
 
