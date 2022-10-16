@@ -16,62 +16,72 @@ $bp-small: 38.75em; //620px;
 
 *,
 *::before,
-*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-    list-style-type: none;
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  list-style-type: none;
 }
 
-*:link{
-    text-decoration: none;
+*:link {
+  text-decoration: none;
 }
 
-html{
-    box-sizing: border-box;
-    font-size: 62.5%;
-    
-    @media only screen and (max-width: $bp-large){
-        font-size: 50%;
-    }
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
-body{
-    font-family: 'Nunito', sans-serif;
-    color: $color-grey-dark;
-    font-weight: 300;
-    line-height: 1.6; 
+body {
+  font-family: "Nunito", sans-serif;
+  color: $color-grey-dark;
+  font-weight: 300;
+  line-height: 1.6;
 }
 
-.container{  
-    background-color: #4c627c;
-    display: grid;
-    grid-template-rows: 5rem repeat(5, min-content) 5rem ;
-    grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(3, [col-start] minmax(30rem, 32rem) [col-end]) [center-end]  minmax(1rem, 1fr) [full-end];
+.container {
+  background-color: #4c627c;
+  display: grid;
+  grid-template-rows: 5rem repeat(5, minmax(min-content, 6rem)) 5rem;
+  // grid-template-rows: 5rem repeat(5, min-content) 5rem;
+  grid-template-columns:
+    [full-start] minmax(1rem, 1fr) [center-start] repeat(
+      3,
+      [col-start] minmax(30rem, 32rem) [col-end]
+    )
+    [center-end] minmax(1rem, 1fr) [full-end];
 
-    grid-column-gap: 1.5rem;
-    grid-row-gap: 1.5rem;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
 
-    @media only screen and (max-width: $bp-medium){
-        grid-template-columns: [full-start] minmax(0, 1fr) [center-start] repeat(3, [col-start] minmax(5rem, 32rem) [col-end]) [center-end]  minmax(0rem, 1fr) [full-end];
-    }
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns:
+      [full-start] minmax(0, 1fr) [center-start] repeat(
+        3,
+        [col-start] minmax(5rem, 32rem) [col-end]
+      )
+      [center-end] minmax(0rem, 1fr) [full-end];
+  }
 }
 
-.icon{
-    width: 2.3rem;
-    height: 2.3rem; 
+.icon {
+  width: 2.3rem;
+  height: 2.3rem;
 }
 
-.button{
-    padding: 1rem 1.5rem;
-    border-radius: 5%;
-    font-size: 1.6rem;
-    border: none;
-    background-color: $color-google;
-    color: #fff;
-
+.button {
+  padding: 1rem 1.5rem;
+  border-radius: 5%;
+  font-size: 1.6rem;
+  border: none;
+  background-color: $color-google;
+  color: #fff;
 }
 
-.u-bold{
-    font-weight: bold;
+.u-bold {
+  font-weight: bold;
 }
